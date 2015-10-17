@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class PortfolioActivity extends AppCompatActivity {
+
+    private final String TOAST_STR_HEADER = "This button will launch ";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +22,67 @@ public class PortfolioActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button popularMovies = (Button)findViewById(R.id.PopularMovieButton);
+        popularMovies.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my popular movies app!", Toast.LENGTH_SHORT).show();
+
             }
         });
+
+
+        Button scoresAppButton = (Button)findViewById(R.id.ScoresAppButton);
+        scoresAppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my scores app!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Button libraryAppButton = (Button)findViewById(R.id.LibraryAppButton);
+        libraryAppButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my library app!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Button buildItBiggerButton = (Button)findViewById(R.id.BuildItBiggerButton);
+        buildItBiggerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my build it bigger app!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Button xyzReaderButton = (Button)findViewById(R.id.XyzReaderButton);
+        xyzReaderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my xyz reader app!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        Button capstoneButton = (Button)findViewById(R.id.CapstoneAppButton);
+        capstoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //display toast
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my capstone app!", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 
     @Override
