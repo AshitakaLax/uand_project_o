@@ -11,6 +11,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.Toast;
 
+/**
+ * @author Levi.Balling
+ *
+ * This is the Portfolio project zero app for the Udacity Nano Degree
+ * 
+ *
+ */
 public class PortfolioActivity extends AppCompatActivity {
 
     private final String TOAST_STR_HEADER = "This button will launch ";
