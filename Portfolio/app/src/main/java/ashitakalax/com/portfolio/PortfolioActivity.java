@@ -15,10 +15,10 @@ import android.widget.Toast;
  * @author Levi.Balling
  *
  * This is the Portfolio project zero app for the Udacity Nano Degree
- * 
+ * Implemented Code review suggestions from BingTao. It saved a lot of code space.
  *
  */
-public class PortfolioActivity extends AppCompatActivity {
+public class PortfolioActivity extends AppCompatActivity implements View.OnClickListener {
 
     private final String TOAST_STR_HEADER = "This button will launch ";
 
@@ -28,68 +28,6 @@ public class PortfolioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_portfolio);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        Button popularMovies = (Button)findViewById(R.id.PopularMovieButton);
-        popularMovies.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my popular movies app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-
-        Button scoresAppButton = (Button)findViewById(R.id.ScoresAppButton);
-        scoresAppButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my scores app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        Button libraryAppButton = (Button)findViewById(R.id.LibraryAppButton);
-        libraryAppButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my library app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        Button buildItBiggerButton = (Button)findViewById(R.id.BuildItBiggerButton);
-        buildItBiggerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my build it bigger app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        Button xyzReaderButton = (Button)findViewById(R.id.XyzReaderButton);
-        xyzReaderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my xyz reader app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
-        Button capstoneButton = (Button)findViewById(R.id.CapstoneAppButton);
-        capstoneButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //display toast
-                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my capstone app!", Toast.LENGTH_SHORT).show();
-
-            }
-        });
-
     }
 
     @Override
@@ -112,5 +50,30 @@ public class PortfolioActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.PopularMovieButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my popular movies app!", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.ScoresAppButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my scores app!", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.LibraryAppButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my library app!", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.BuildItBiggerButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my build it bigger app!", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.XyzReaderButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my xyz reader app!", Toast.LENGTH_SHORT).show();
+                return;
+            case R.id.CapstoneAppButton:
+                Toast.makeText(getApplicationContext(), TOAST_STR_HEADER+"my capstone app!", Toast.LENGTH_SHORT).show();
+                return;
+        }
     }
 }

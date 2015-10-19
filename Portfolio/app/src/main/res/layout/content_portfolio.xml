@@ -11,12 +11,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".PortfolioActivity"
     tools:showIn="@layout/activity_portfolio"
-    android:background="#dfeaf1">
+    android:background="@color/colorBackground">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="My Nanodegree Apps!"
+        android:text="@string/main_activity_title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textSize="25dp"
@@ -24,71 +24,45 @@
         android:textColor="#000000" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Popular movies"
+        style="@style/StandardButton"
+        android:text="@string/pop_movies_button"
         android:id="@+id/PopularMovieButton"
-        android:layout_marginTop="26dp"
-        android:background="#F08C35"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:minWidth="200dp" />
+        android:background="@color/colorButtonOrange"
+        android:layout_below="@+id/textView" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scores App"
+        style="@style/StandardButton"
+        android:text="@string/scores_app_button"
         android:id="@+id/ScoresAppButton"
-        android:layout_marginTop="13dp"
-        android:background="#F08C35"
-        android:layout_below="@+id/PopularMovieButton"
-        android:layout_alignLeft="@+id/PopularMovieButton"
-        android:layout_alignStart="@+id/PopularMovieButton"
-        android:minWidth="200dp" />
+        android:background="@color/colorButtonOrange"
+        android:layout_below="@+id/PopularMovieButton" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Library App"
+        style="@style/StandardButton"
+        android:text="@string/library_app_button"
         android:id="@+id/LibraryAppButton"
-        android:layout_marginTop="13dp"
-        android:background="#F08C35"
-        android:layout_below="@+id/ScoresAppButton"
-        android:layout_centerHorizontal="true"
-        android:minWidth="200dp" />
+        android:background="@color/colorButtonOrange"
+        android:layout_below="@+id/ScoresAppButton" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Build It Bigger"
+        style="@style/StandardButton"
+        android:text="@string/build_it_bigger_button"
         android:id="@+id/BuildItBiggerButton"
-        android:layout_marginTop="13dp"
-        android:background="#F08C35"
-        android:minWidth="200dp"
-        android:layout_below="@+id/LibraryAppButton"
-        android:layout_alignLeft="@+id/XyzReaderButton"
-        android:layout_alignStart="@+id/XyzReaderButton" />
+        android:background="@color/colorButtonOrange"
+        android:layout_below="@+id/LibraryAppButton" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="XYZ Reader"
+        style="@style/StandardButton"
+        android:text="@string/xzy_reader_button"
         android:id="@+id/XyzReaderButton"
-        android:layout_marginTop="13dp"
-        android:background="#F08C35"
-        android:layout_below="@+id/BuildItBiggerButton"
-        android:layout_centerHorizontal="true"
-        android:minWidth="200dp" />
+        android:background="@color/colorButtonOrange"
+        android:layout_below="@+id/BuildItBiggerButton" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CAPSTONE: My Own App"
+        style="@style/StandardButton"
+        android:text="@string/capstone_button"
         android:id="@+id/CapstoneAppButton"
-        android:layout_marginTop="13dp"
-        android:background="#cd0E3e"
+        android:background="@color/colorButtonRed"
         android:layout_below="@+id/XyzReaderButton"
-        android:layout_centerHorizontal="true"
-        android:minWidth="200dp"
-        android:textColor="#ffffff" />
+        android:textColor="@color/colorButtonFont" />
 </RelativeLayout>
